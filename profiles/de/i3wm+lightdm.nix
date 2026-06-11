@@ -24,6 +24,8 @@
 
         # libva
         kdePackages.spectacle
+
+        nautilus
       ];
     };
 
