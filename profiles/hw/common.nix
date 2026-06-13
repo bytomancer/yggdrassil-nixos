@@ -16,4 +16,8 @@
   environment.systemPackages = [
     pkgs.udiskie
   ];
+  
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=30
+  '';
 }
