@@ -1,15 +1,15 @@
 { config, pkgs, ... }:
 {
-  services.udev.packages = with pkgs; [ vial via ];
-
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "bytomancer" ];
+
+  users.extraGroups.plugdev.members = [ "bytomancer" ];
 
   # user
   users.users.bytomancer = {
     isNormalUser = true;
     description = "Bytomancer";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "plugdev" ];
     packages = with pkgs; [
       fastfetch
       alacritty
@@ -66,6 +66,7 @@
       dust
 
       easyeffects
+      discord
     ];
   };
 }
