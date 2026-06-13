@@ -9,7 +9,7 @@
   users.users.bytomancer = {
     isNormalUser = true;
     description = "Bytomancer";
-    extraGroups = [ "networkmanager" "wheel" "docker" "plugdev" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "storage" "plugdev" ];
     packages = with pkgs; [
       fastfetch
       alacritty
@@ -18,12 +18,10 @@
       vscodium
       vesktop
       git
-      nautilus
       picom
       feh
       xwinwrap
       mpv
-      obsidian
       arandr
       pavucontrol
       fastfetch
@@ -42,8 +40,6 @@
       gnome-font-viewer
       fio
       stow
-      gscreenshot
-      via
       cmus
       yt-dlp
       pipe-viewer
@@ -51,11 +47,11 @@
       kazam
       bc
       termusic
-      
+
       thunderbird
       emacs
       gnumake
-      
+
       bat
       eza
       zoxide
@@ -66,6 +62,7 @@
       dust
 
       easyeffects
+
       discord
     ];
   };

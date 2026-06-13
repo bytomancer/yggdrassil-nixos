@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
+  inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
   outputs = { self, nixpkgs, ... }: {
     nixosConfigurations = {
@@ -12,6 +13,14 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/hvergelmir/configuration.nix
+        ];
+      };
+
+      # Proxy server
+      hofund = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hofund/configuration.nix
         ];
       };
 
@@ -28,6 +37,14 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/skidbladnir/configuration.nix
+        ];
+      };
+
+      # Surface Book 3
+      brisingamen = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/brisingamen/configuration.nix
         ];
       };
 

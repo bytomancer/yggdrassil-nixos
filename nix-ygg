@@ -17,4 +17,7 @@ fi
 RAW_HOST="${1:-$(hostname)}"
 HOST="$(printf '%s' "$RAW_HOST" | tr '[:upper:]' '[:lower:]')"
 
-exec nixos-rebuild switch $UPGRADE --flake "${FLAKE_PATH}#${HOST}"
+exec env NIX_CONFIG="warn-dirty = false" \
+  nixos-rebuild switch $UPGRADE \
+  --flake "${FLAKE_PATH}#${HOST}" \
+  --impure

@@ -1,6 +1,9 @@
 # Yggdrassil NixOS Configurations
 This project collects the NixOS configurations for all my personal servers and computers.
 
+## Setup
+[Setup Guide](SETUP.md)
+
 ## Usage
 Check out the repo to a home directory as your current user:
 ```bash

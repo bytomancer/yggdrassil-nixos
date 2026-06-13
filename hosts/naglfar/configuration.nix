@@ -9,10 +9,16 @@
       ../../profiles/bootloader.nix
       ../../profiles/global-packages.nix
 
+      ../../profiles/hw/common.nix
+      ../../profiles/hw/audio.nix
+      ../../profiles/hw/fw.nix
+
       ../../profiles/de/locale.nix
-      ../../profiles/de/i3wm+gdm.nix
+      ../../profiles/de/i3wm+lightdm.nix
 
       ../../profiles/dev/docker.nix
+
+      ../../profiles/xiv.nix
 
       ../../users/bytomancer.nix
     ];
@@ -25,19 +31,6 @@
     layout = "us";
     variant = "";
   };
-
-  services.udev.packages = with pkgs; [
-    vial
-    via
-  ];
-
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.hardware.bolt.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
-  services.printing.enable = true;
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

@@ -3,6 +3,7 @@
 {
   imports =
     [
+      <nixos-hardware/microsoft/surface/surface-pro-intel>
       ./hardware-configuration.nix
 
       ../../profiles/base.nix
@@ -13,16 +14,14 @@
       ../../profiles/hw/audio.nix
 
       ../../profiles/de/locale.nix
-      ../../profiles/de/i3wm+gdm.nix
-
-      ../../profiles/steam.nix
+      ../../profiles/de/kde+plasma.nix
 
       ../../profiles/dev/docker.nix
 
       ../../users/bytomancer.nix
     ];
 
-  networking.hostName = "Skidbladnir";
+  networking.hostName = "Brisingamen";
 
   environment.pathsToLink = [ "/libexec" ];
 
@@ -32,6 +31,10 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  environment.systemPackages = with pkgs; [
+    maliit-keyboard
+  ];
 
   system.stateVersion = "25.05";
 }

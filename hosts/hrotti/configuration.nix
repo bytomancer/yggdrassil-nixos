@@ -10,10 +10,11 @@
       ../../profiles/global-packages.nix
 
       ../../profiles/hw/nvidia.nix
+      ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
 
       ../../profiles/de/locale.nix
-      ../../profiles/de/gnome.nix
+      ../../profiles/de/kde+plasma.nix
 
       ../../profiles/steam.nix
       ../../profiles/xiv.nix

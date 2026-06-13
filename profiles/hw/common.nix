@@ -1,9 +1,23 @@
+{ pkgs, ... }:
+
 {
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
   services.hardware.bolt.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
+
   services.printing.enable = true;
+
+  # Auto-mount disks
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+  services.devmon.enable = true;
+  
+  environment.systemPackages = [
+    pkgs.udiskie
+  ];
+  
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=30
+  '';
 }
