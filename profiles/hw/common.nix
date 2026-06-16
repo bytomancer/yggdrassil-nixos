@@ -15,6 +15,9 @@
   
   environment.systemPackages = [
     pkgs.udiskie
+    pkgs.wget
+    pkgs.git
+    pkgs.unzip
   ];
   
   security.sudo.extraConfig = ''

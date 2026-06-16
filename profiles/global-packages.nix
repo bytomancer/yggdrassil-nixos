@@ -13,4 +13,6 @@
     blueman
     solaar
   ];
+
+  programs.firefox.enable = true;
 }
