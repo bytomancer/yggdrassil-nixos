@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     vim
-    zsh
     udisks
     udiskie
     gnome-disk-utility
@@ -14,4 +13,6 @@
     blueman
     solaar
   ];
+
+  programs.firefox.enable = true;
 }

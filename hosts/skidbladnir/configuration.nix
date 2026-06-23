@@ -11,11 +11,13 @@
 
       ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
+      ../../profiles/hw/bluray.nix
 
       ../../profiles/de/locale.nix
-      ../../profiles/de/i3wm+gdm.nix
+      ../../profiles/de/i3wm+lightdm.nix
 
       ../../profiles/steam.nix
+      ../../profiles/xiv.nix
 
       ../../profiles/dev/docker.nix
 
@@ -23,15 +25,6 @@
     ];
 
   networking.hostName = "Skidbladnir";
-
-  environment.pathsToLink = [ "/libexec" ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  programs.firefox.enable = true;
-
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   system.stateVersion = "25.05";
 }

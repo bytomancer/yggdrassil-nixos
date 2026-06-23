@@ -15,5 +15,12 @@
   
   environment.systemPackages = [
     pkgs.udiskie
+    pkgs.wget
+    pkgs.git
+    pkgs.unzip
   ];
+  
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=30
+  '';
 }
