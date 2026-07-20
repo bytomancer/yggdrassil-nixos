@@ -23,8 +23,6 @@
 
   networking.hostName = "Hringhorni";
 
-  environment.pathsToLink = [ "/libexec" ];
-
   nixpkgs.config.allowUnfree = true;
 
   programs.firefox.enable = true;

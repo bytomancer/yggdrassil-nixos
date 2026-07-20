@@ -25,8 +25,6 @@
 
   networking.hostName = "Naglfar";
 
-  environment.pathsToLink = [ "/libexec" ];
-
   services.xserver.xkb = {
     layout = "us";
     variant = "";
