@@ -32,6 +32,13 @@
     displayManager.lightdm.enable = true;
     displayManager.lightdm.greeters.slick.enable = true;
   };
+  
+  services.gnome.gnome-keyring.enable = true;
 
-  environment.pathsToLink = [ "/libexec" ];
+  security.pam.services.lightdm.enableGnomeKeyring = true;
+
+  environment.systemPackages = with pkgs; [
+    gnome-keyring
+    libsecret
+  ];
 }
