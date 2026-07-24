@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
+git add .
+
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 FLAKE_PATH="$SCRIPT_DIR"
 
