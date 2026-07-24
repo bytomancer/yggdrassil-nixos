@@ -2,6 +2,7 @@
 
 {
   services.speechd.enable = false;
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 

@@ -12,6 +12,7 @@
       ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
       ../../profiles/hw/bluray.nix
+      ../../profiles/hw/fw.nix
 
       ../../profiles/de/locale.nix
       ../../profiles/de/i3wm+lightdm.nix
