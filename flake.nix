@@ -2,7 +2,8 @@
   description = "Bytomancer's NixOS configuration base flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
