@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 {
-  services.speechd.enable = false;
+  hardware.keyboard.qmk.enable = true;
+  services.udev.packages = [ pkgs.via ];
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  '';
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
