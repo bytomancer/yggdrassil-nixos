@@ -16,32 +16,15 @@
       ../../profiles/de/locale.nix
       ../../profiles/de/i3wm+lightdm.nix
 
-      ../../profiles/dev/docker.nix
-
+      ../../profiles/steam.nix
       ../../profiles/xiv.nix
+
+      ../../profiles/dev/docker.nix
 
       ../../users/bytomancer.nix
     ];
 
   networking.hostName = "Naglfar";
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  programs.firefox.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05";
 }

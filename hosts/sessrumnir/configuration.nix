@@ -8,7 +8,7 @@
       ../../profiles/base.nix
       ../../profiles/bootloader.nix
       ../../profiles/global-packages.nix
-
+S
       ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
       ../../profiles/hw/fw.nix
@@ -23,7 +23,7 @@
       ../../users/bytomancer.nix
     ];
 
-  networking.hostName = "Hringhorni";
+  networking.hostName = "Sessrumnir";
 
   system.stateVersion = "25.05";
 }

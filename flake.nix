@@ -18,26 +18,26 @@
       };
 
       # Proxy server
-      hofund = nixpkgs.lib.nixosSystem {
+      biforst = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/hofund/configuration.nix
+          ./hosts/biforst/configuration.nix
         ];
       };
 
       # FW12
-      naglfar = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/naglfar/configuration.nix
-        ];
-      };
-
-      # FW13
       skidbladnir = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/skidbladnir/configuration.nix
+        ];
+      };
+
+      # FW13
+      naglfar = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/naglfar/configuration.nix
         ];
       };
 

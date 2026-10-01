@@ -18,7 +18,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "Hofund";
+  networking.hostName = "Bifrost";
 
   services.openssh.enable = true;
   
