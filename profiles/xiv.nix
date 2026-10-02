@@ -8,7 +8,8 @@
   programs.gamemode.enable = true;
 
   services.flatpak.enable = true;
-  
+  services.input-remapper.enable = true;
+
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -16,7 +17,6 @@
     ];
   };
   xdg.portal.config.common.default = "*";
-
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -26,9 +26,8 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    input-remapper
-  ];
+  # input-remapper removed here since services.input-remapper handles it
+  environment.systemPackages = with pkgs; [ ];
 
   networking = {
     firewall = {
