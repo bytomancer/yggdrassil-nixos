@@ -21,3 +21,4 @@ exec env NIX_CONFIG="warn-dirty = false" \
   nixos-rebuild switch $UPGRADE \
   --flake "path:${FLAKE_PATH}#${HOST}" \
   --impure
+  --show-trace
