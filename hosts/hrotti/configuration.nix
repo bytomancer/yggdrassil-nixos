@@ -9,9 +9,9 @@
       ../../profiles/bootloader.nix
       ../../profiles/global-packages.nix
 
-      ../../profiles/hw/nvidia.nix
       ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
+      ../../profiles/hw/amdgpu.nix
 
       ../../profiles/de/locale.nix
       ../../profiles/de/kde+plasma.nix
