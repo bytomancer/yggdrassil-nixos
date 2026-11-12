@@ -14,7 +14,7 @@
       ../../profiles/hw/fw.nix
 
       ../../profiles/de/locale.nix
-      ../../profiles/de/i3wm+lightdm.nix
+      ../../profiles/de/sway.nix
 
       ../../profiles/steam.nix
       ../../profiles/xiv.nix
